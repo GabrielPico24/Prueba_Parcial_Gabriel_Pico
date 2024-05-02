@@ -26,7 +26,7 @@ class SearchTripsPage extends StatelessWidget {
                   const Expanded(
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'Knucles Mount',
+                        hintText: 'Knucles Mount Range',
                         contentPadding: EdgeInsets.symmetric(horizontal: 16),
                         border: InputBorder.none,
                       ),
@@ -37,7 +37,7 @@ class SearchTripsPage extends StatelessWidget {
                     onPressed: () {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: const Text('Resultado: Gabriel Pico'),
+                          content: const Text('Gabriel Pico'),
                           duration: const Duration(seconds: 2), // Duración del SnackBar
                           action: SnackBarAction(
                             label: 'Cerrar',
