@@ -3,11 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'button_purple.dart';
 
 class DescriptionPlace extends StatelessWidget {
-  const DescriptionPlace(
-      {super.key,
-      required this.namePlace,
-      required this.stars,
-      required this.descriptionPlace});
+  const DescriptionPlace({
+    Key? key,
+    required this.namePlace,
+    required this.stars,
+    required this.descriptionPlace,
+  }) : super(key: key);
 
   final String namePlace;
   final int stars;
@@ -100,13 +101,23 @@ class DescriptionPlace extends StatelessWidget {
       ),
     );
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        titleStars,
-        description,
-        const ButtonPurple(buttonText: 'Navigate')
-      ],
-    );
+   return Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+    titleStars,
+    description,
+    const ButtonPurple(buttonText: 'Navigate'),
+    const SizedBox(height: 8), 
+    const Text(
+      'All reviews',
+      style: TextStyle(
+        fontSize: 16, 
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+    ),
+  ],
+);
+
   }
 }

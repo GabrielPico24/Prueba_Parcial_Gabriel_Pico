@@ -6,7 +6,7 @@ class Review extends StatelessWidget {
       required this.pathImage,
       required this.name,
       required this.information,
-      required this.comment});
+      required this.comment, required int starCount});
 
   final String pathImage;
 
