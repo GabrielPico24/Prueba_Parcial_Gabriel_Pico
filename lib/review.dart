@@ -1,23 +1,33 @@
 import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget {
-  const Review(
-      {super.key,
-      required this.pathImage,
-      required this.name,
-      required this.information,
-      required this.comment, required int starCount});
+  const Review({
+    Key? key,
+    required this.pathImage,
+    required this.name,
+    required this.information,
+    required this.comment,
+    required this.stars,
+  }) : super(key: key);
 
   final String pathImage;
-
   final String name;
-
   final String information;
-
   final String comment;
+  final int stars;
 
   @override
   Widget build(BuildContext context) {
+    final starsWidget = Row(
+      children: <Widget>[
+        const Icon(Icons.star, color: Colors.yellow),
+        const Icon(Icons.star, color: Colors.yellow),
+        const Icon(Icons.star, color: Colors.yellow),
+        const Icon(Icons.star_half, color: Colors.yellow),
+        const Icon(Icons.star_border, color: Colors.yellow),
+      ].sublist(0, stars), // Mostrar solo el número de estrellas dado
+    );
+
     final photo = Container(
       margin: const EdgeInsets.only(
         top: 20,
@@ -53,15 +63,21 @@ class Review extends StatelessWidget {
       margin: const EdgeInsets.only(
         left: 20,
       ),
-      child: Text(
-        information,
-        textAlign: TextAlign.left,
-        style: const TextStyle(
-          fontFamily: 'Lato',
-          fontWeight: FontWeight.bold,
-          fontSize: 11,
-          color: Color(0xff939598),
-        ),
+      child: Row(
+        children: <Widget>[
+          Text(
+            information,
+            textAlign: TextAlign.left,
+            style: const TextStyle(
+              fontFamily: 'Lato',
+              fontWeight: FontWeight.bold,
+              fontSize: 11,
+              color: Color(0xff939598),
+            ),
+          ),
+          const SizedBox(width: 5),
+          starsWidget,
+        ],
       ),
     );
 

@@ -112,8 +112,8 @@ class DescriptionPlace extends StatelessWidget {
       'All reviews',
       style: TextStyle(
         fontSize: 16, 
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
+        fontWeight: FontWeight.bold, 
+        color: Colors.black, 
       ),
     ),
   ],

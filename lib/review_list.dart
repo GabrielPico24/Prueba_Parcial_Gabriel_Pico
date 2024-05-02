@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'review.dart';
 
 class ReviewList extends StatelessWidget {
-  const ReviewList({super.key});
+  const ReviewList({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,18 +14,21 @@ class ReviewList extends StatelessWidget {
           name: 'Varuna Yasas',
           information: '1 review 5 photos',
           comment: 'There is an amazing place in Siri Lanka',
+          stars: 5,
         ),
         Review(
           pathImage: 'assets/images/ann.jpg',
           name: 'Varuna Yasas',
           information: '1 review 5 photos',
           comment: 'There is an amazing place in Siri Lanka',
+          stars: 5,
         ),
         Review(
           pathImage: 'assets/images/people.jpg',
           name: 'Varuna Yasas',
           information: '1 review 5 photos',
           comment: 'There is an amazing place in Siri Lanka',
+          stars: 5,
         ),
       ],
     );
