@@ -109,7 +109,7 @@ class DescriptionPlace extends StatelessWidget {
     const ButtonPurple(buttonText: 'Navigate'),
     const SizedBox(height: 8), 
     const Text(
-      'All reviews',
+      '       All reviews',
       style: TextStyle(
         fontSize: 16, 
         fontWeight: FontWeight.bold, 
